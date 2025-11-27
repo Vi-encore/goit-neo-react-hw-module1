@@ -1,0 +1,12 @@
+.table-row:nth-child(even) {
+  background-color: #d3d3d3;
+}
+
+.table-row:nth-child(odd) {
+  background-color: white;
+}
+
+.table-description {
+  border-collapse: collapse;
+  border: 2px solid #242424;
+}
