@@ -1,0 +1,11 @@
+.friends-container {
+  margin-top: 50px;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+}

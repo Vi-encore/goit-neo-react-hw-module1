@@ -36,9 +36,9 @@ export default function Profile({
 }
 
 Profile.propTypes = {
-  username: PropTypes.string,
-  location: PropTypes.string,
-  tag: PropTypes.string,
-  avatar: PropTypes.string,
-  stats: PropTypes.array,
+  username: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.array.isRequired,
 };

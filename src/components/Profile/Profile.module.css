@@ -14,7 +14,6 @@
   overflow: hidden;
 
   width: 400px;
-
 }
 
 .user-img-wrap {
@@ -35,10 +34,8 @@
 }
 
 .user-stats {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   width: 100%;
+  margin-top: 20px;
 
   display: flex;
   flex-direction: row;
@@ -53,8 +50,6 @@
   flex-direction: column;
   flex: 1;
 }
-
-
 
 .user-stats li:nth-child(2) {
   border-right: 2px solid #808080;
