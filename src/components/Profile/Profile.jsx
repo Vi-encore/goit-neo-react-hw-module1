@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import css from "./Profile.module.css";
+import PropTypes from 'prop-types';
+import css from './Profile.module.css';
 
 export default function Profile({
   username,
@@ -9,26 +9,26 @@ export default function Profile({
   stats: { followers, views, likes },
 }) {
   return (
-    <div className={css["user-card"]}>
+    <div className={css['user-card']}>
       <div>
-        <img src={avatar} alt="User avatar" className={css["user-img-wrap"]} />
-        <p className={css["user-name"]}>{username}</p>
-        <p className={css["user-tag"]}>@{tag}</p>
-        <p className={css["user-location"]}>{location}</p>
+        <img src={avatar} alt="User avatar" className={css['user-img-wrap']} />
+        <p className={css['user-name']}>{username}</p>
+        <p className={css['user-tag']}>@{tag}</p>
+        <p className={css['user-location']}>{location}</p>
       </div>
-      <ul className={css["user-stats"]}>
+      <ul className={css['user-stats']}>
         <li>
           <span>Followers</span>
-          <span className={css["user-stat"]}>{followers}</span>
+          <span className={css['user-stat']}>{followers}</span>
         </li>
 
         <li>
           <span>Views</span>
-          <span className={css["user-stat"]}>{views}</span>
+          <span className={css['user-stat']}>{views}</span>
         </li>
         <li>
           <span>Likes</span>
-          <span className={css["user-stat"]}>{likes}</span>
+          <span className={css['user-stat']}>{likes}</span>
         </li>
       </ul>
     </div>
@@ -40,5 +40,9 @@ Profile.propTypes = {
   location: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  stats: PropTypes.array.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }).isRequired,
 };
